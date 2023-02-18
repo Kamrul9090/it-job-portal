@@ -9,7 +9,7 @@ const FresherJob = () => {
     const { data: fresherJob = [], isLoading } = useQuery({
         queryKey: ['fresherJob'],
         queryFn: async () => {
-            const res = await fetch('http://localhost:5000/fresherJob');
+            const res = await fetch('https://it-job-portal-server.vercel.app/fresherJob');
             const data = await res.json();
             return data;
         }

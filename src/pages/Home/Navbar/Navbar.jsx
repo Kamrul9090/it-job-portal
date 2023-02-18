@@ -21,7 +21,7 @@ const Navbar = () => {
         <button onClick={signOut} className='btn btn-xs'><Link>Log Out</Link></button>
     </>
     return (
-        <nav className='bg-base-200'>
+        <nav className='bg-base-300'>
             <div className="navbar">
                 <div className="navbar-start block lg:hidden">
                     <div className="dropdown">
