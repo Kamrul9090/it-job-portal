@@ -1,8 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
-const Jobs = ({ jobs }) => {
+const ExJobs = ({ jobs }) => {
     const { logo, company, position, location } = jobs;
+    console.log(jobs);
     return (
         <div className="card w-80 bg-base-200 shadow-xl rounded-2xl">
             <figure className="px-10 pt-10">
@@ -13,11 +13,11 @@ const Jobs = ({ jobs }) => {
                 <p>Company: {company}</p>
                 <p>Location: {location}</p>
                 <div className="card-actions">
-                    <button className="btn btn-error"><Link to="/login">Apply Now</Link></button>
+                    <button className="btn btn-error">Apply Now</button>
                 </div>
             </div>
         </div>
     );
 };
 
-export default Jobs;
+export default ExJobs;
