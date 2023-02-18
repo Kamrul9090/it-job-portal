@@ -2,10 +2,11 @@ import { async } from '@firebase/util';
 import React from 'react';
 import { toast } from 'react-hot-toast';
 import { useQuery } from 'react-query';
+import { MoonLoader } from 'react-spinners';
 import Jobs from './Jobs';
 
 const FresherJob = () => {
-    const { data: fresherJob = [], isloading } = useQuery({
+    const { data: fresherJob = [], isLoading } = useQuery({
         queryKey: ['fresherJob'],
         queryFn: async () => {
             const res = await fetch('http://localhost:5000/fresherJob');
@@ -13,7 +14,9 @@ const FresherJob = () => {
             return data;
         }
     })
-
+    if (isLoading) {
+        return <MoonLoader></MoonLoader>
+    }
     return (
         <div className='my-5 max-w-5xl mx-auto'>
             <h2 className='text-2xl font-semibold font-sans'>Fresher Jobs</h2>
