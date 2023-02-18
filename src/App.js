@@ -1,11 +1,14 @@
 import logo from './logo.svg';
 import './App.css';
 import { Toaster } from 'react-hot-toast';
+import { RouterProvider } from 'react-router';
+import { router } from './routers/Router';
 
 function App() {
   return (
-    <div className="">
-      <h1>hello it-job-portal</h1>
+    <div className="max-w-full">
+      <RouterProvider router={router}>
+      </RouterProvider>
       <Toaster />
     </div>
   );
