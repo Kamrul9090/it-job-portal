@@ -17,7 +17,7 @@ const Navbar = () => {
         <li><Link to='/home'>Home</Link></li>
         <li><Link to='/about'>About</Link></li>
         <li><Link to='/contact'>Contact Us</Link></li>
-        <button className='btn btn-xs'><Link to='/signUp'>Sign In</Link></button>
+        <button className='btn btn-xs'><Link to='/login'>Login</Link></button>
         <button onClick={signOut} className='btn btn-xs'><Link>Log Out</Link></button>
     </>
     return (
